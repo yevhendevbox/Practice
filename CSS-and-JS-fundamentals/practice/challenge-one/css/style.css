@@ -1,0 +1,45 @@
+:root {
+  --accent: #2E7AD3;
+  --accent-darken: #104C90;
+  --link: #FF8000;
+  --gray: #f1f1f1;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.title {
+  text-align: center;
+  font-size: 48px;
+  color: var(--accent);
+  margin: 45px;
+}
+
+h2 {
+  font-size: 32px;
+  color: var(--accent-darken);
+}
+
+p {
+  margin: 9px 0;
+}
+
+a {
+  color: var(--link);
+}
+
+a:hover,
+a:focus {
+  opacity: .6;
+}
+
+.main-content {
+  width: 500px;
+  background-color: var(--gray);
+  margin: 0 auto;
+  padding: 25px;
+}

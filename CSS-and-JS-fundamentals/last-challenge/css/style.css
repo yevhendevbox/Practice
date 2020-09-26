@@ -1,0 +1,92 @@
+:root {
+  --accent: #EF5839;
+  --accent-darken: #2E354F;
+  --white: #fff;
+  --bold: 900;
+  --regular: 400;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  ;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  color: inherit;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  width: 80%;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  background-color: var(--accent-darken);
+  color: var(--white);
+  padding: 3em 0;
+}
+
+.section-one {
+  padding: 2em 0;
+}
+
+.section-one {
+  color: var(--accent-darken);
+}
+
+.section-one h2,
+.section-two h2 {
+  color: var(--accent);
+  margin-bottom: 1.5em;
+}
+
+.section-two {
+  background-color: var(--accent-darken);
+  color: var(--white);
+  padding: 3em 0;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: var(--bold);
+  padding: 15px 30px;
+  background-color: var(--white);
+  color: var(--accent-darken);
+  margin-right: 10px;
+}
+
+.accent-btn {
+  background-color: var(--accent);
+  color: var(--white);
+}
+
+.btn:hover,
+.btn:focus {
+  opacity: .7;
+}
