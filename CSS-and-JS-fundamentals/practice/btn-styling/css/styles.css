@@ -1,0 +1,17 @@
+:root {
+  --red-bg: #c74e48;
+  --red-text: #beffb0;
+  --green-bg: #6cb344;
+  --green-text: #ffd9d1;
+  --blue-bg: #b8eaff;
+  --blue-text: #472a00;
+  --purple-bg: #af63db;
+  --purple-text: #fffbc2;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
