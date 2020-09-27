@@ -1,0 +1,40 @@
+:root {
+  --link-color: #ef5839;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 800px
+}
+
+.main img {
+  width: 250px;
+}
+
+.meta {
+  font-size: 14px;
+}
+
+.author,
+.date {
+  color: var(--link-color);
+  font-weight: 900;
+}
+
+.post {
+  font-size: 14px;
+}

@@ -1,17 +1,32 @@
 :root {
-  --red-bg: #c74e48;
-  --red-text: #beffb0;
-  --green-bg: #6cb344;
-  --green-text: #ffd9d1;
-  --blue-bg: #b8eaff;
-  --blue-text: #472a00;
-  --purple-bg: #af63db;
-  --purple-text: #fffbc2;
+  --btn-bg: #ef5839;
+  --hover-bg: #d4b44c;
+  --hover-txt: #2e354f;
 }
 
-html,
 body {
+  height: 100vh;
   margin: 0;
   padding: 0;
-  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+}
+
+.btn {
+  text-decoration: none;
+  color: white;
+  background-color: var(--btn-bg);
+  padding: 15px 30px;
+  font-weight: 900;
+  transition: all .3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  padding: 20px 40px;
+  background-color: var(--hover-bg);
+  color: var(--hover-txt);
+  font-size: 20px;
 }
