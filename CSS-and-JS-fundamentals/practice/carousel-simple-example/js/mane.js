@@ -13,7 +13,13 @@ function hideAllSlides() {
 }
 
 function moveToPrevSlide(){
-  console.log('Previous btn was clicked');
+  hideAllSlides();
+  if(slidePosition === 0){
+    slidePosition = totalSlides - 1;
+  } else {
+    slidePosition--;
+  }
+  slides[slidePosition].classList.add('carousel-item-visible');
 }
 
 function moveToNextSlide(){
@@ -24,7 +30,6 @@ function moveToNextSlide(){
     slidePosition++;
   }
   slides[slidePosition].classList.add('carousel-item-visible');
-  console.log(slidePosition);
 }
 prevBtn.addEventListener('click', moveToPrevSlide);
 nextBtn.addEventListener('click', moveToNextSlide);
