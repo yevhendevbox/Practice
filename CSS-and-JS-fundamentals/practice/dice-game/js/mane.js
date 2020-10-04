@@ -13,6 +13,8 @@ const playerOneScoreboard = document.getElementById('player1Scoreboard');
 const playerTwoScoreboard = document.getElementById('player2Scoreboard');
 const playerOneDice = document.getElementById('player1Dice');
 const playerTwoDice = document.getElementById('player2Dice');
+const doOrDieBtn = document.getElementById('do-or-die');
+
 
 function switchDisplayStyle(){
   rollBtn.style.display = 'none';
@@ -59,7 +61,41 @@ function resetHandeler() {
   resetBtn.style.display = 'none';
   playerTwoDice.classList.remove('active');
   playerOneDice.classList.add('active');
+  playerTwoScoreboard.textContent = '0';
+  playerOneScoreboard.textContent = '0';
+}
+
+function doubleTrouble() {
+  let roll = Math.floor(Math.random() * 6) + 1;
+  const boostTrap = Math.floor(Math.random()*2);
+  let boostedRoll = roll * boostTrap;
+
+  if(playerOneTurn === true) {
+    playerOneDice.textContent = boostedRoll;
+    message.textContent = 'Player Two Turn';
+    playerTwoDice.classList.add('active');
+    playerOneDice.classList.remove('active');
+    playerOneScore = playerOneScore + boostedRoll;
+    playerOneScoreboard.textContent = playerOneScore;
+  } else {
+    playerTwoDice.textContent = boostedRoll;
+    message.textContent = 'Player One Turn';
+    playerOneDice.classList.add('active');
+    playerTwoDice.classList.remove('active');
+    playerTwoScore = playerTwoScore + boostedRoll;
+    playerTwoScoreboard.textContent = playerTwoScore;
+  } 
+  
+  if(playerOneScore >= 20) {
+    message.textContent = 'Player One Won! 🥳';
+    switchDisplayStyle();
+  } else if(playerTwoScore >= 20){
+    message.textContent = 'Player Two Won! 🎉';
+    switchDisplayStyle();
+  }
+  playerOneTurn = !playerOneTurn;
 }
 
 rollBtn.addEventListener('click', rollTheDice);
 resetBtn.addEventListener('click', resetHandeler);
+doOrDieBtn.addEventListener('click', doubleTrouble);
