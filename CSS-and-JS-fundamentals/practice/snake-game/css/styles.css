@@ -26,3 +26,7 @@ body {
 .snake {
   background-color: var(--snake);
 }
+
+.apple {
+  background-color: blue;
+}
