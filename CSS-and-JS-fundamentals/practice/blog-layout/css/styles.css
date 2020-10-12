@@ -1,8 +1,10 @@
 :root {
   --accent: #1792D2;
   --dark-accent: #143774;
-  --text: #707070;
-  --bg-color: #f8f8f8;
+  --text-gray: #707070;
+  --light-gray: #f8f8f8;
+  --dark-gray: #717171;
+  --sbar-bg: #EBEBEB;
 }
 
 html,
@@ -11,11 +13,26 @@ body {
   padding: 0px;
   font-family: "Ubuntu bold", sans-serif;
   font-size: 16px;
+  color: var(--text-gray);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lora", serif;
+  color: var(--dark-accent);
 }
 
 a {
-  color: inherit;
+  color: var(--accent);
   text-decoration: none;
+}
+
+img {
+  width: 100%;
 }
 
 .container {
@@ -30,15 +47,23 @@ a {
   justify-content: space-between;
 }
 
+/* -----------------------------------------------------------------------
+Main navigation styles 
+-------------------------------------------------------------------------*/
+
 .header {
-  background-color: var(--bg-color);
-  color: var(--text);
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
   padding: 2em 0;
   margin: 0;
 }
 
 .site-title {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .title {
@@ -73,6 +98,8 @@ a {
 
 .nav-link {
   font-size: 1rem;
+  font-weight: 700;
+  color: var(--dark-gray);
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: all .3s ease;
@@ -116,4 +143,105 @@ a {
     margin-left: 0;
     margin-bottom: 1em;
   }
+}
+
+/* -----------------------------------------------------------------------
+Main section styles 
+-------------------------------------------------------------------------*/
+.main {
+  margin-top: 2em;
+}
+
+.main-post,
+.post {
+  margin-bottom: 3em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid var(--text-gray);
+}
+
+.post-link {
+  display: inline-block;
+  font-size: .875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 1em;
+}
+
+/* -----------------------------------------------------------------------
+Sidebar styles 
+-------------------------------------------------------------------------*/
+.img-holder {
+  height: 135px;
+}
+
+.img-holder img {
+  height: 135px;
+  object-fit: cover;
+}
+
+.sidebar {
+  padding: 3em 0;
+  padding-top: 0;
+}
+
+.sidebar h3 {
+  font-family: "Ubuntu Bold", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 3em;
+}
+
+.about-me,
+.recent-posts {
+  background-color: var(--sbar-bg);
+  padding: 1.5rem;
+}
+
+.about-me__wrapper,
+.recent-posts__wrapper {
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.about-me {
+  margin-bottom: 1rem;
+  color: var(--dark-accent);
+}
+
+.recent-posts {
+  color: var(--dark-accent);
+}
+
+.recent-posts__prev {
+  border-bottom: 1px solid var(--text-gray);
+  margin-bottom: 2em;
+}
+
+.recent-posts__prev:last-child {
+  border: none;
+}
+
+/* -----------------------------------------------------------------------
+Footer styles 
+-------------------------------------------------------------------------*/
+.footer {
+  background-color: var(--dark-accent);
+  margin: 0;
+  padding: 2em 0;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: var(--accent);
+}
+
+.footer h5 {
+  margin-bottom: .5em;
+  color: var(--accent);
+}
+
+.footer-text p {
+  margin: 0;
 }
