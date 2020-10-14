@@ -23,12 +23,20 @@ h4,
 h5,
 h6 {
   font-family: "Lora", serif;
+  font-weight: 400;
   color: var(--dark-accent);
 }
 
 a {
   color: var(--accent);
   text-decoration: none;
+  transition: all .3s ease;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+  color: var(--dark-accent);
 }
 
 img {
@@ -108,6 +116,7 @@ Main navigation styles
 .nav-link:hover,
 .nav-link:focus {
   color: var(--accent);
+  text-decoration: none;
 }
 
 .nav-link:after {
@@ -152,20 +161,39 @@ Main section styles
   margin-top: 2em;
 }
 
+.main-post {
+  border-bottom: 1px solid var(--text-gray);
+}
+
 .main-post,
 .post {
   margin-bottom: 3em;
   padding-bottom: 2em;
-  border-bottom: 1px solid var(--text-gray);
 }
 
 .post-link {
   display: inline-block;
-  font-size: .875rem;
+  font-size: .750rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-top: 1em;
+  transition: all .3s ease;
+}
+
+.post-link:hover,
+.post-link:focus {
+  color: var(--dark-accent);
+}
+
+.post-description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-date {
+  font-size: 0.875rem;
 }
 
 /* -----------------------------------------------------------------------
@@ -194,13 +222,13 @@ Sidebar styles
 .about-me,
 .recent-posts {
   background-color: var(--sbar-bg);
-  padding: 1.5rem;
+  padding: 1em;
 }
 
 .about-me__wrapper,
 .recent-posts__wrapper {
   background-color: #fff;
-  padding: 1rem;
+  padding: 1.8em;
 }
 
 .about-me {
@@ -219,6 +247,20 @@ Sidebar styles
 
 .recent-posts__prev:last-child {
   border: none;
+}
+
+.recent-posts__title:hover,
+.recent-posts__title:focus {
+  text-decoration: none;
+}
+
+.recent-posts__title h4 {
+  transition: color .3s ease;
+}
+
+.recent-posts__title h4:hover,
+.recent-posts__title h4:focus {
+  color: var(--accent);
 }
 
 /* -----------------------------------------------------------------------
@@ -244,4 +286,74 @@ Footer styles
 
 .footer-text p {
   margin: 0;
+}
+
+/* -----------------------------------------------------------------------
+About me page styles 
+-------------------------------------------------------------------------*/
+.about-me__post {
+  border: none;
+}
+
+.about-me__post h3 {
+  color: var(--accent);
+}
+
+/* -----------------------------------------------------------------------
+Recent posts page styles 
+-------------------------------------------------------------------------*/
+.recent-post {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.recent-post h3 {
+  margin-top: 0;
+}
+
+.recent-post .post-date {
+  font-size: .750rem;
+}
+
+.recent-post .post-img {
+  width: 30%;
+}
+
+.recent-post .post-content {
+  width: 65%;
+}
+
+/* -----------------------------------------------------------------------
+Media queries styles 
+-------------------------------------------------------------------------*/
+
+@media (min-width: 600px) {
+  .container-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-content {
+    width: 65%;
+  }
+
+  .sidebar {
+    width: 30%;
+  }
+
+  .about-me {
+    margin-bottom: 3em;
+  }
+}
+
+@media (max-width: 600px) {
+  .recent-post {
+    flex-direction: column;
+  }
+
+  .recent-post .post-img,
+  .recent-post .post-content {
+    width: 100%;
+  }
 }
