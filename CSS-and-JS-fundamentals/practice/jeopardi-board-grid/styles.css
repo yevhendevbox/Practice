@@ -1,0 +1,46 @@
+:root {
+  --accent: #05CBE9;
+  --dark-accent: #051e79;
+  --text-color: #fff;
+  --title: 'Blinker', sans-serif;
+  --text: 'Source Sans Pro', sans-serif;
+  --shadow: 7px 5px 20px -9px rgba(0, 0, 0, 0.75);
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: lightblue;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(5, 20%);
+  height: 100vh;
+}
+
+.board * {
+  border: 0.1rem solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.my-category-title {
+  background-color: lightblue;
+  grid-row-start: 1;
+  text-transform: uppercase;
+}
+
+.my-category-clue {
+  font-size: 2rem;
+}

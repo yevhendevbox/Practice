@@ -1,0 +1,47 @@
+:root {
+  --accent: #05CBE9;
+  --dark-accent: #111D4A;
+  --text-color: #fff;
+  --title: 'Blinker', sans-serif;
+  --text: 'Source Sans Pro', sans-serif;
+  --shadow: 7px 5px 20px -9px rgba(0, 0, 0, 0.75);
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.my-colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 1rem;
+}
+
+.my-color {
+  color: var(--text-color);
+  height: 100px;
+  width: 100px;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+.main-form {
+  width: 50%;
+  max-width: 700px;
+  padding: 2em;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
